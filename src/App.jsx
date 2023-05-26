@@ -1,20 +1,23 @@
-import './App.css'
-import {
-  createBrowserRouter,
-  RouterProvider,
-} from "react-router-dom";
+import "./App.css";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import Root from "./routes/root";
 import ErrorPage from "./error-page";
 
-import { Calendar, Dashboard, Messages, Teams, TournamentTracking } from './components';
-// import Dashboard from './components/Dashboard';
-import Sidebar from './components/Sidebar';
+import {
+  Calendar,
+  Dashboard,
+  Messages,
+  Teams,
+  TournamentTracking,
+} from "./components";
+import Sidebar from "./components/Sidebar";
+import { StepProvider } from "./context/StepContext";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element:<Root />,
+    element: <Root />,
     errorElement: <ErrorPage />,
     children: [
       {
@@ -27,7 +30,11 @@ const router = createBrowserRouter([
       },
       {
         path: "tournament-tracking",
-        element: <TournamentTracking />,
+        element: (
+          <StepProvider>
+            <TournamentTracking />
+          </StepProvider>
+        ),
       },
       {
         path: "teams",
@@ -40,22 +47,19 @@ const router = createBrowserRouter([
     ],
   },
   {
-    path:"/sidebar",
-    element:<Sidebar/>
+    path: "/sidebar",
+    element: <Sidebar />,
   },
-  
 ]);
 
-
 function App() {
-  
   return (
     <>
       <div>
         <RouterProvider router={router} />
       </div>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

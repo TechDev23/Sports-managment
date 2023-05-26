@@ -6,7 +6,14 @@ export default withMT({
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        orange: {
+          DEFAULT: '#FFA500', // Change this to your desired orange color
+        },
+      },
+
+    },
   },
   plugins: [],
 })
