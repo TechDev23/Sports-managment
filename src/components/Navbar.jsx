@@ -9,7 +9,6 @@ import {
   MenuList,
   MenuItem,
   Avatar,
-  Card,
   IconButton,
   Input,
   Badge,
@@ -25,6 +24,7 @@ import {
   PowerIcon,
   HomeIcon,
   BellAlertIcon,
+  GiftIcon,
 } from "@heroicons/react/24/outline";
 
 // profile menu component
@@ -121,6 +121,10 @@ const navListItems = [
     icon: CubeTransparentIcon,
   },
   {
+    label: "Features",
+    icon: GiftIcon,
+  },
+  {
     label: "Blogs",
     icon: CodeBracketSquareIcon,
   },
@@ -140,7 +144,7 @@ function NavList() {
             className="font-normal"
           >
             <MenuItem className="hover:bg-orange-50 hover:text-orange-400 flex items-center gap-2 lg:rounded-full transition-colors">
-              {React.createElement(icon, { className: "h-[18px] w-[18px]" })}{" "}
+              {React.createElement(icon, { className: "h-[18px] w-[18px]" })}
               {label}
             </MenuItem>
           </Typography>
@@ -174,8 +178,8 @@ function SearchInput() {
 
 function Notionfications(){
   return(
-    <Badge color="orange" content="5" withBorder>
-    <IconButton variant="text" className="hover:bg-orange-50 text-black hover:text-orange-600 active:bg-orange-100">
+    <Badge color="orange" content="5" withBorder placement="bottom-end">
+    <IconButton variant="text" className="hover:bg-orange-50 text-black border-2 border-orange-50 hover:text-orange-600 active:bg-orange-100">
       <BellAlertIcon className="h-4 w-4" />
     </IconButton>
   </Badge>
@@ -193,7 +197,7 @@ export default function ComplexNavbar() {
 
   return (
     <Navbar className="mx-auto max-w-screen-xl p-2 lg:pl-6 rounded-none shadow-none">
-      <div className="relative mx-auto flex items-center justify-around text-blue-gray-900">
+      <div className="relative mx-auto flex items-center gap-6 justify-end text-blue-gray-900">
         <div>
             <NavList />
         </div>

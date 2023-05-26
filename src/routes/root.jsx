@@ -6,14 +6,14 @@ export default function Root() {
   return (
     <>
       <div className="flex">
-        <div className="flex flex-col border-2 border-purple-300 w-72 h-screen p-1">
+        <div className="z-10 sticky top-0 h-screen bg-white">
           <Sidebar />
         </div>
-        <div className="w-4/5 m-1  mt-0 flex flex-col items-center justify-start">
-          <div className="w-full h-1/6 flex items-center">
+        <div className="w-screen m-1 ml-2 mt-0 flex flex-col items-center justify-start">
+          <div className="bg-white w-full h-16 flex items-center drop-shadow-xl rounded-lg rounded-t-none rounded-s">
             <Navbar />
           </div>
-          <div className="border-2 border-yellow-500 my-1 w-full h-full">
+          <div className="bg-white mt-4 w-full min-h-screen drop-shadow-2xl rounded-md">
             <Outlet />
           </div>
         </div>
