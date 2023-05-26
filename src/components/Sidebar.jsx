@@ -61,7 +61,7 @@ const Sidebar = () => {
         }bg-white shadow-xl h-screen rounded-none p-4 transition-transform duration-500`}
       >
         <ChevronDoubleLeftIcon
-          className={`absolute cursor-pointer bg-white z-50 -right-4 top-6 w-7 h-7 text-orange-400  border-orange-50 border-2  rounded-full scale-95 hover:scale-100 ${
+          className={`absolute cursor-pointer bg-white z-50 -right-4 top-6 w-7 h-7 text-orange-400   rounded-full scale-90 hover:scale-100 ${
              !open && "rotate-180"
            } transition-all duration-300`}
           onClick={() => setOpen(!open)}
