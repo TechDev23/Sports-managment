@@ -12,19 +12,19 @@ const Sidebar = () => {
         {/* start of sidebar nav elements */}
         <div className="border-2 border-green-600 flex-grow my-1">
           <Link to={"/dashboard"}>
-            <p className="p-2 bg-slate-200 m-2 rounded">Dashboard</p>
+            <p className="p-2 bg-gray-200 m-2 rounded">Dashboard</p>
           </Link>
           <Link to={"/calendar"}>
-            <p className="p-2 bg-slate-200 m-2 rounded">Calendar</p>
+            <p className="p-2 bg-gray-200 m-2 rounded">Calendar</p>
           </Link>
           <Link to={"tournament-tracking"}>
-            <p className="p-2 bg-slate-200 m-2 rounded">Tournament Tracking</p>
+            <p className="p-2 bg-gray-200 m-2 rounded">Tournament Tracking</p>
           </Link>
           <Link to={"/teams"}>
-            <p className="p-2 bg-slate-200 m-2 rounded">Teams</p>
+            <p className="p-2 bg-gray-200 m-2 rounded">Teams</p>
           </Link>
           <Link to={"/messages"}>
-            <p className="p-2 bg-slate-200 m-2 rounded">Messages</p>
+            <p className="p-2 bg-gray-200 m-2 rounded">Messages</p>
           </Link>
         </div>
         {/* end of sidebar nav elements */}
