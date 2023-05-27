@@ -7,12 +7,6 @@ export default withMT({
   ],
   theme: {
     extend: {
-      colors: {
-        orange: {
-          DEFAULT: '#FFA500', // Change this to your desired orange color
-        },
-      },
-
     },
   },
   plugins: [],

@@ -5,9 +5,9 @@ import { ButtonGroup, Button } from "@material-tailwind/react";
 const Step5 = () => {
   return (
     <div className="border-red-500 border-2">
-      <h2 className="font-bold text-3xl text-center">Active Tournament</h2>
+      <h2 className="font-bold text-3xl">Active Tournament</h2>
 
-      <div className="my-10 min-w-screen flex flex-row items-center content-center justify-center">
+      <div className="my-10 min-w-screen flex flex-row items-center content-center justify-start">
         <ButtonGroup className="flex row divide-orange-600  bg-orange-400 p-1 rounded-md space-x-2">
           <Button className="hover:shadow-none rounded-md bg-orange-400 hover:bg-white hover:text-orange-400 focus:bg-white active:bg-white focus:text-orange-400">
             Game details
@@ -26,7 +26,7 @@ const Step5 = () => {
           </Button>
         </ButtonGroup>
       </div>
-      <div className="min-h-screen min-w-screen px-10 mt-14 ">
+      <div className="min-h-screen min-w-screen">
         <Textarea
           style={{ height: "50vh" }}
           label="Detailed information present here"

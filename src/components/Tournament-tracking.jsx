@@ -13,16 +13,12 @@ export default function TournamentTracking() {
   const [isFirstStep, setIsFirstStep] = React.useState(false);
 
   const handleNext = () => {
-    window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
-    return (
-      !isLastStep && setActiveStep((cur) => cur + 1)
-    )
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+    return !isLastStep && setActiveStep((cur) => cur + 1);
   };
-  const handlePrev = () =>{
-    window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
-    return (
-      !isLastStep && setActiveStep((cur) => cur - 1)
-    )
+  const handlePrev = () => {
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+    return !isLastStep && setActiveStep((cur) => cur - 1);
   };
 
   const renderStepContent = () => {
@@ -42,72 +38,72 @@ export default function TournamentTracking() {
     }
   };
 
-
   return (
     <div className="border-2 border-red-500  w-full py-4 px-8 flex flex-col">
-      <div className="h-[130px] p-4 border-indigo-500 border-2">
+      <div className="h-[130px] p-4">
         <Stepper
           activeStep={activeStep}
           isLastStep={(value) => setIsLastStep(value)}
           isFirstStep={(value) => setIsFirstStep(value)}
           className={`w-[640px] mx-auto`}
+          activeLineClassName="bg-orange-400"
         >
-          <Step className={`${
-      activeStep === 0 ? "bg-orange" : "bg-gray-200"
-    } step-item`} onClick={() => setActiveStep(0)}>
-            <UserIcon className="h-5 w-5 " />
-            <div className="absolute -bottom-16 w-26 text-center">
+          <Step activeClassName="bg-orange-500 shadow-none scale-105" completedClassName="bg-orange-500" 
+            onClick={() => setActiveStep(0)}
+          >
+            <UserIcon className="h-5 w-5" />
+            <div className="absolute -bottom-16 w-26 text-center shadow-blue-gray-300">
               <Typography
                 variant="paragraph"
-                color={activeStep === 0 ? "blue" : "gray"}
+                color={activeStep === 0 ? "orange" : "gray"}
                 className="text-center"
               >
                 Organisational Details
               </Typography>
             </div>
           </Step>
-          <Step className="" onClick={() => setActiveStep(1)}>
+          <Step activeClassName="bg-orange-500 shadow-none scale-105" completedClassName="bg-orange-500"  onClick={() => setActiveStep(1)}>
             <UserIcon className="h-5 w-5" />
             <div className="absolute -bottom-10 w-26 text-center">
               <Typography
                 variant="paragraph"
-                color={activeStep === 1 ? "blue" : "gray"}
+                color={activeStep === 1 ? "orange" : "gray"}
                 className="text-center"
               >
                 Invite
               </Typography>
             </div>
           </Step>
-          <Step className="" onClick={() => setActiveStep(2)}>
+          <Step activeClassName="bg-orange-500 shadow-none scale-105" completedClassName="bg-orange-500"  onClick={() => setActiveStep(2)}>
             <BuildingLibraryIcon className="h-5 w-5" />
             <div className="absolute -bottom-16 w-26 text-center">
               <Typography
                 variant="paragraph"
-                color={activeStep === 2 ? "blue" : "gray"}
+                color={activeStep === 2 ? "orange" : "gray"}
                 className="text-center"
               >
                 Game Details
               </Typography>
             </div>
           </Step>
-          <Step className="" onClick={() => setActiveStep(3)}>
+          <Step activeClassName="bg-orange-500 shadow-none scale-105" completedClassName="bg-orange-500"  onClick={() => setActiveStep(3)}>
             <UserIcon className="h-5 w-5" />
             <div className="absolute -bottom-10 w-26 text-center">
               <Typography
                 variant="paragraph"
-                color={activeStep === 3 ? "blue" : "gray"}
+                color={activeStep === 3 ? "orange" : "gray"}
                 className="text-center"
               >
                 Payment
               </Typography>
             </div>
           </Step>
-          <Step className="" onClick={() => setActiveStep(4)}>
+          <Step activeClassName="bg-orange-500 shadow-none scale-105" completedClassName="bg-orange-500"  onClick={() => setActiveStep(4)}>
             <CogIcon className="h-5 w-5" />
             <div className="absolute -bottom-10 w-28 text-center">
               <Typography
                 variant="paragraph"
-                color={activeStep === 4 ? "blue" : "gray"}
+                color={activeStep === 4 ? "orange" : "gray"}
                 className="text-center"
               >
                 Go Live
@@ -119,7 +115,7 @@ export default function TournamentTracking() {
 
       <div className="h-full mt-2 ">{renderStepContent()}</div>
 
-      <div className="bg-green-50 flex justify-between">
+      <div className="flex justify-between">
         <Button onClick={handlePrev} disabled={isFirstStep}>
           Prev
         </Button>

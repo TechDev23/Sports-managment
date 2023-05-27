@@ -3,6 +3,8 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import Root from "./routes/root";
 import ErrorPage from "./error-page";
+import { Provider } from "react-redux";
+import { store } from "./redux/store";
 
 import {
   Calendar,
@@ -56,7 +58,11 @@ function App() {
   return (
     <>
       <div>
-        <RouterProvider router={router} />
+        <Provider store={store}>
+          <RouterProvider router={router}>
+            <Root />
+          </RouterProvider>
+        </Provider>
       </div>
     </>
   );
