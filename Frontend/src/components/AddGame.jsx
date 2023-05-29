@@ -91,7 +91,8 @@ const AddGame = ({ index }) => {
   };
 
   const handleGenderChange = (e) => {
-    setGender(e.target.value);
+    console.log(gender)
+    setGender(e)
   };
 
   console.log("competition name is : ",compName);
@@ -136,9 +137,9 @@ const AddGame = ({ index }) => {
             onChange={handleGenderChange}
             className="flex row divide-orange-600  bg-orange-400 p-1 rounded-md space-x-2"
           >
-            <Button className='hover:shadow-none rounded-md bg-orange-400 text-white hover:bg-white hover:text-orange-400 focus:bg-white selection:bg-white focus:text-orange-400'>Male</Button>
-            <Button className='hover:shadow-none rounded-md bg-orange-400 text-white hover:bg-white hover:text-orange-400 focus:bg-white selection:bg-white focus:text-orange-400'>Female</Button>
-            <Button className='hover:shadow-none rounded-md bg-orange-400 text-white hover:bg-white hover:text-orange-400 focus:bg-white selection:bg-white focus:text-orange-400'>Mix up</Button>
+            <Button value={"male"} onClick={() => handleGenderChange("male")} className='hover:shadow-none rounded-md bg-orange-400 text-white hover:bg-white hover:text-orange-400 focus:bg-white selection:bg-white focus:text-orange-400'>Male</Button>
+            <Button value={"female"} onClick={() => handleGenderChange("female")}  className='hover:shadow-none rounded-md bg-orange-400 text-white hover:bg-white hover:text-orange-400 focus:bg-white selection:bg-white focus:text-orange-400'>Female</Button>
+            <Button value={"mix"} onClick={() => handleGenderChange("mix")} className='hover:shadow-none rounded-md bg-orange-400 text-white hover:bg-white hover:text-orange-400 focus:bg-white selection:bg-white focus:text-orange-400'>Mix up</Button>
           </ButtonGroup>
         </div>
 
